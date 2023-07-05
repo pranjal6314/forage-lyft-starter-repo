@@ -7,13 +7,13 @@ class Rorschach(Car):
     def __init__(self, current_mileage, last_service_mileage, last_service_date, tire_sensor_data):
         rorschach_engine = WilloughbyEngine(current_mileage, last_service_mileage)
         rorschach_battery = NubbinBattery(last_service_date)
-        rorschach_tire = OctoprimeTire(tire_sensor_data)
+        rorschach_tire = OctoprimeTire(tire_sensor_data) # this is a list of tire pressure values
 
         super().__init__(rorschach_engine, rorschach_battery, rorschach_tire)
 
         self.engine = rorschach_engine
         self.battery = rorschach_battery
-        self.tire = rorschach_tire
-    
+        self.tire = rorschach_tire # this is a list of tires
+     
     def needs_service(self):
         return super().needs_service()

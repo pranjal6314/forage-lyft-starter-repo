@@ -6,15 +6,15 @@ class Car(Engine, Battery):
     def __init__(self, engine, battery, tire):
         self.engine = engine
         self.battery = battery
-        self.tire = tire
+       self.tire = tire # this is a list of tires
 
     def battery_needs_service(self):
         return self.battery.battery_needs_service()
 
-    def engine_needs_service(self):
+    def engine_needs_service(self): 
         return self.engine.engine_needs_service()
 
-    def tire_needs_service(self):
+    def tire_needs_service(self): # upgrade this to check all tires
         return self.tire.tire_needs_service()
 
     def needs_service(self):
